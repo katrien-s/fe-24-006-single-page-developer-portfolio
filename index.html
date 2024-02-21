@@ -35,11 +35,21 @@
 		</header>
 		<main class="wrapper">
 			<section class="hero-section">
-				<img src="./assets/images/image-profile-mobile.webp" alt="" />
+				<img
+					srcset="
+						./assets/images/image-profile-mobile.webp  345w,
+						./assets/images/image-profile-tablet.webp  409w,
+						./assets/images/image-profile-desktop.webp 949w
+					"
+					sizes="(max-width: 20em) 345px, (max-width: 40em) 409px, 949px"
+					src="./assets/images/image-profile-desktop.webp"
+					alt="Screenshot for Design Portfolio"
+					class="hero-img"
+				/>
 				<h1>
 					Nice to meet you! I'm <span class="text-underline">Adam Keyes</span>.
 				</h1>
-				<p>
+				<p class="margin-inline-auto">
 					Based in the UK, I'm a front-end developer passionate about building
 					accessible web apps that users love.
 				</p>
@@ -74,90 +84,146 @@
 				</ul>
 			</section>
 			<section class="projects-section">
-				<h2>Projects</h2>
-				<button class="btn">Contact me</button>
+				<div class="projects-header">
+					<h2>Projects</h2>
+					<button class="btn">Contact me</button>
+				</div>
 				<ul class="project-cards">
 					<li class="project-card">
-						<img src="./assets/images/thumbnail-project-1-small.webp" alt="" />
+						<img
+							srcset="
+								./assets/images/thumbnail-project-1-small.webp  686w,
+								./assets/images/thumbnail-project-1-large.webp 1080w
+							"
+							sizes="(max-width: 40em) 686px, 1080px"
+							src="./assets/images/thumbnail-project-1-large.webp"
+							alt="Screenshot for Design Portfolio"
+							class="project-img"
+						/>
 						<h3>Design portfolio</h3>
-						<div class="project-tools">
-							<p>HTML</p>
-							<p>CSS</p>
-						</div>
-						<div class="project-buttons">
-							<button class="btn">View project</button>
-							<button class="btn">View code</button>
-						</div>
+						<ul class="project-tools">
+							<li>HTML</li>
+							<li>CSS</li>
+						</ul>
+						<p class="project-buttons">
+							<a href="#" class="btn">View project</a>
+							<a href="#" class="btn">View code</a>
+						</p>
 					</li>
 					<li class="project-card">
-						<img src="" alt="" />
+						<img
+							srcset="
+								./assets/images/thumbnail-project-2-small.webp  686w,
+								./assets/images/thumbnail-project-2-large.webp 1080w
+							"
+							sizes="(max-width: 40em) 686px, 1080px"
+							src="./assets/images/thumbnail-project-2-large.webp"
+							alt="Screenshot for E-Learning Landing Page"
+							class="project-img"
+						/>
 						<h3>E-learning landing page</h3>
-						<div class="project-tools">
-							<p>HTML</p>
-							<p>CSS</p>
-						</div>
-						<div class="project-buttons">
-							<button class="btn">View project</button>
-							<button class="btn">View code</button>
-						</div>
+						<ul class="project-tools">
+							<li>HTML</li>
+							<li>CSS</li>
+						</ul>
+						<p class="project-buttons">
+							<a href="#" class="btn">View project</a>
+							<a href="#" class="btn">View code</a>
+						</p>
 					</li>
 					<li class="project-card">
-						<img src="" alt="" />
+						<img
+							srcset="
+								./assets/images/thumbnail-project-3-small.webp  686w,
+								./assets/images/thumbnail-project-3-large.webp 1080w
+							"
+							sizes="(max-width: 40em) 686px, 1080px"
+							src="./assets/images/thumbnail-project-3-large.webp"
+							alt="Screenshot for Todo Web App"
+							class="project-img"
+						/>
 						<h3>todo web app</h3>
-						<div class="project-tools">
-							<p>HTML</p>
-							<p>CSS</p>
-							<p>javascript</p>
-						</div>
-						<div class="project-buttons">
-							<button class="btn">View project</button>
-							<button class="btn">View code</button>
-						</div>
+						<ul class="project-tools">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>javascript</li>
+						</ul>
+						<p class="project-buttons">
+							<a href="#" class="btn">View project</a>
+							<a href="#" class="btn">View code</a>
+						</p>
 					</li>
 					<li class="project-card">
-						<img src="" alt="" />
+						<img
+							srcset="
+								./assets/images/thumbnail-project-4-small.webp  686w,
+								./assets/images/thumbnail-project-4-large.webp 1080w
+							"
+							sizes="(max-width: 40em) 686px, 1080px"
+							src="./assets/images/thumbnail-project-4-large.webp"
+							alt="Screenshot for Entertainment Web App"
+							class="project-img"
+						/>
 						<h3>Entertainment web app</h3>
-						<div class="project-tools">
-							<p>HTML</p>
-							<p>CSS</p>
-							<p>javascript</p>
-						</div>
-						<div class="project-buttons">
-							<button class="btn">View project</button>
-							<button class="btn">View code</button>
-						</div>
+						<ul class="project-tools">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>javascript</li>
+						</ul>
+						<p class="project-buttons">
+							<a href="#" class="btn">View project</a>
+							<a href="#" class="btn">View code</a>
+						</p>
 					</li>
 					<li class="project-card">
-						<img src="" alt="" />
+						<img
+							srcset="
+								./assets/images/thumbnail-project-5-small.webp  686w,
+								./assets/images/thumbnail-project-5-large.webp 1080w
+							"
+							sizes="(max-width: 40em) 686px, 1080px"
+							src="./assets/images/thumbnail-project-5-large.webp"
+							alt="Screenshot for Memory Game"
+							class="project-img"
+						/>
 						<h3>Memory Game</h3>
-						<div class="project-tools">
-							<p>HTML</p>
-							<p>CSS</p>
-							<p>Javascript</p>
-						</div>
-						<div class="project-buttons">
-							<button class="btn">View project</button>
-							<button class="btn">View code</button>
-						</div>
+						<ul class="project-tools">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>javascript</li>
+						</ul>
+						<p class="project-buttons">
+							<a href="#" class="btn">View project</a>
+							<a href="#" class="btn">View code</a>
+						</p>
 					</li>
 					<li class="project-card">
-						<img src="" alt="" />
+						<img
+							srcset="
+								./assets/images/thumbnail-project-6-small.webp  686w,
+								./assets/images/thumbnail-project-6-large.webp 1080w
+							"
+							sizes="(max-width: 40em) 686px, 1080px"
+							src="./assets/images/thumbnail-project-6-large.webp"
+							alt="Screenshot for Art Gallery Showcase"
+							class="project-img"
+						/>
 						<h3>Art gallery showcase</h3>
-						<div class="project-tools">
-							<p>HTML</p>
-							<p>CSS</p>
-							<p>Javascript</p>
-						</div>
-						<div class="project-buttons">
-							<button class="btn">View project</button>
-							<button class="btn">View code</button>
-						</div>
+						<ul class="project-tools">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>javascript</li>
+						</ul>
+						<p class="project-buttons">
+							<a href="#" class="btn">View project</a>
+							<a href="#" class="btn">View code</a>
+						</p>
 					</li>
 				</ul>
 			</section>
 			<section class="form-section">
 				<h2>Contact</h2>
-				<p>
+				<p class="margin-inline-auto">
 					I would love to hear about your project and how I could help. Please
 					fill in the form, and I’ll get back to you as soon as possible.
 				</p>

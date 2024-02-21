@@ -48,6 +48,10 @@ li {
 	text-wrap: pretty;
 }
 
+a {
+	text-decoration: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
 	:has(:target) {
 		scroll-behavior: smooth;
@@ -117,11 +121,6 @@ h3 {
 	padding-inline: 1rem;
 }
 
-p,
-li {
-	margin-inline: auto;
-}
-
 /* Header */
 header {
 	padding-block: 2rem;
@@ -158,28 +157,43 @@ header {
 	color: var(--clr-neutral-200);
 }
 
+.projects-section {
+	padding-block: 5rem;
+}
+
+.projects-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .project-card {
-  padding-block: 2.5rem;
+	padding-top: 2.5rem;
 	text-align: left;
-  width: 100%;
+	width: 100%;
+	margin-inline: auto;
+}
+
+.project-img {
+	margin-bottom: 1.25rem;
 }
 
 .project-card h3 {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .project-tools {
 	color: var(--clr-neutral-200);
 	font-size: 1rem;
-}
-
-.project-tools p {
-	display: inline;
 	text-transform: uppercase;
+	display: flex;
+	gap: 2rem;
+	margin-block: 1.25rem 2.25rem;
 }
 
-.project-tools p:not(:last-of-type) {
-	margin-right: 1.125rem;
+.project-buttons {
+	display: flex;
+	gap: 2rem;
 }
 
 /* Footer */
@@ -188,6 +202,10 @@ footer {
 }
 
 /* Buttons */
+a {
+	color: var(--clr-neutral-200);
+}
+
 .btn {
 	cursor: pointer;
 	background-color: transparent;
@@ -204,4 +222,8 @@ footer {
 
 .text-underline {
 	border-bottom: 4px solid var(--clr-accent-400);
+}
+
+.margin-inline-auto {
+	margin-inline: auto;
 }
