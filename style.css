@@ -111,15 +111,18 @@ h3 {
 h4 {
 	font-size: 1.5rem;
 	line-height: 1.3;
+	text-transform: uppercase;
 }
 
 .wrapper {
 	--content-max-width: 1110px;
 	--spacing-inline: 1rem;
 
+	/* max-width doesn't work - it stretches full width - check code/tutorial again */
 	width: min(var(--content-max-width), 100% - var((--spacing-inline) * 1));
 	margin-inline: auto;
 	padding-inline: 1rem;
+	/* outline: 1px solid lavender; */
 }
 
 /* Header */
@@ -280,10 +283,6 @@ hr {
 	margin-bottom: 1.25rem;
 }
 
-.project-card h3 {
-	text-transform: uppercase;
-}
-
 .project-tools {
 	color: var(--clr-neutral-200);
 	font-size: 1rem;
@@ -317,17 +316,95 @@ hr {
 
 .form-section {
 	display: grid;
-	grid-template-columns: auto minmax(1fr, 445px) auto;
+	grid-template-columns: auto minmax(250px, 445px) auto;
 	grid-template-areas: '. form .';
+  padding-top: 3.75rem;
+	/* outline: 1px solid lightcyan; */
 }
 
-.form-section div {
+.form-section .form-control {
 	grid-area: form;
+	margin-bottom: 3rem;
+	/* outline: 1px solid lightcoral; */
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 2rem;
+	/* outline: 1px solid lawngreen; */
+}
+
+.form-text p {
+	color: var(--clr-neutral-200);
+}
+
+form input,
+form textarea {
+	text-transform: uppercase;
+	color: var(--clr-neutral-200);
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 1rem 1.5rem;
+	border: none;
+	border-bottom: 1px solid var(--clr-neutral-100);
+	background-color: transparent;
+	width: 100%;
+}
+
+form textarea {
+	resize: none;
+	height: 110px;
+}
+
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	top: auto;
+	overflow: hidden;
+}
+
+.form-btn {
+	margin-left: auto;
+	margin-top: 2rem;
+}
+
+@media (min-width: 60em) {
+	.form-section {
+		grid-template-columns: auto minmax(455px, 1110px) auto;
+	}
+
+	.form-control {
+		/* outline: 1px solid lightgoldenrodyellow; */
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		/* let's make this value more flexible. 13 default is insane */
+		gap: 13rem;
+	}
+
+	.form-text {
+		text-align: left;
+	}
+}
+
+/* Add form-validation html/css/js */
+/* Not ok comes with red underline, red text and a warning sign */
+
+.form-section,
+footer {
+	background-color: var(--clr-neutral-800);
 }
 
 /* Footer */
 footer {
 	padding-block: 1.875rem 3rem;
+}
+
+footer hr {
+  margin-bottom: 2.5rem;
 }
 
 /* Buttons */
@@ -345,7 +422,16 @@ a {
 	letter-spacing: 2.29px;
 	font-size: 1rem;
 	font-weight: 700;
+	transition: all 0.5s ease;
 }
+
+.btn:hover,
+.btn:focus,
+a:focus {
+	color: var(--clr-accent-400);
+}
+
+/* Add a11y on anchor-tags so one could tab thrugh the content. Already added a :focus and tabindex but it doesn't seem to work */
 
 /* Utility */
 
@@ -355,4 +441,16 @@ a {
 
 .margin-inline-auto {
 	margin-inline: auto;
+}
+
+.margin-bottom-64 {
+	margin-bottom: 3rem;
+}
+
+svg {
+	transition: all 0.3s ease;
+}
+
+svg:hover path {
+	fill: var(--clr-accent-400);
 }
