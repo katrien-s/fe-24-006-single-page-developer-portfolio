@@ -14,38 +14,47 @@
 		<title>Frontend Mentor | Single-page developer portfolio</title>
 	</head>
 	<body>
-		<header class="wrapper">
-			<p class="logo">adamkeyes</p>
-			<ul class="social-icons">
-				<li>
-					<a href="#"><img src="./assets/images/icon-github.svg" alt="" /></a>
-				</li>
-				<li>
-					<a href="#"
-						><img src="./assets/images/icon-frontend-mentor.svg" alt=""
-					/></a>
-				</li>
-				<li>
-					<a href="#"><img src="./assets/images/icon-linkedin.svg" alt="" /></a>
-				</li>
-				<li>
-					<a href="#"><img src="./assets/images/icon-twitter.svg" alt="" /></a>
-				</li>
-			</ul>
-		</header>
-		<main class="wrapper">
-			<section class="hero-section">
+		<header>
+			<div class="wrapper fixed-items">
+				<p class="logo">adamkeyes</p>
+				<ul class="social-icons">
+					<li>
+						<a href="#"><img src="./assets/images/icon-github.svg" alt="" /></a>
+					</li>
+					<li>
+						<a href="#"
+							><img src="./assets/images/icon-frontend-mentor.svg" alt=""
+						/></a>
+					</li>
+					<li>
+						<a href="#"
+							><img src="./assets/images/icon-linkedin.svg" alt=""
+						/></a>
+					</li>
+					<li>
+						<a href="#"
+							><img src="./assets/images/icon-twitter.svg" alt=""
+						/></a>
+					</li>
+				</ul>
+			</div>
+			<div class="hero-section">
 				<img
 					srcset="
 						./assets/images/image-profile-mobile.webp  345w,
 						./assets/images/image-profile-tablet.webp  409w,
 						./assets/images/image-profile-desktop.webp 949w
 					"
-					sizes="(max-width: 20em) 345px, (max-width: 40em) 409px, 949px"
+					sizes="(max-width: 40em) 345px, (max-width: 40em) 409px, 949px"
 					src="./assets/images/image-profile-desktop.webp"
 					alt="Screenshot for Design Portfolio"
 					class="hero-img"
 				/>
+			</div>
+		</header>
+		<hr />
+		<main class="wrapper">
+			<section class="intro-section">
 				<h1>
 					Nice to meet you! I'm <span class="text-underline">Adam Keyes</span>.
 				</h1>
@@ -58,27 +67,27 @@
 			<section class="expertise-section">
 				<ul class="expertise-list">
 					<li class="expertise-list__item">
-						<h2>HTML</h2>
+						<h3>HTML</h3>
 						<p>4 Years Experience</p>
 					</li>
 					<li class="expertise-list__item">
-						<h2>CSS</h2>
+						<h3>CSS</h3>
 						<p>4 Years Experience</p>
 					</li>
 					<li class="expertise-list__item">
-						<h2>JavaScript</h2>
+						<h3>JavaScript</h3>
 						<p>4 Years Experience</p>
 					</li>
 					<li class="expertise-list__item">
-						<h2>Accessibility</h2>
+						<h3>Accessibility</h3>
 						<p>4 Years Experience</p>
 					</li>
 					<li class="expertise-list__item">
-						<h2>React</h2>
+						<h3>React</h3>
 						<p>3 Years Experience</p>
 					</li>
 					<li class="expertise-list__item">
-						<h2>Sass</h2>
+						<h3>Sass</h3>
 						<p>3 Years Experience</p>
 					</li>
 				</ul>
@@ -100,7 +109,7 @@
 							alt="Screenshot for Design Portfolio"
 							class="project-img"
 						/>
-						<h3>Design portfolio</h3>
+						<h4>Design portfolio</h4>
 						<ul class="project-tools">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -121,7 +130,7 @@
 							alt="Screenshot for E-Learning Landing Page"
 							class="project-img"
 						/>
-						<h3>E-learning landing page</h3>
+						<h4>E-learning landing page</h4>
 						<ul class="project-tools">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -142,7 +151,7 @@
 							alt="Screenshot for Todo Web App"
 							class="project-img"
 						/>
-						<h3>todo web app</h3>
+						<h4>todo web app</h4>
 						<ul class="project-tools">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -164,7 +173,7 @@
 							alt="Screenshot for Entertainment Web App"
 							class="project-img"
 						/>
-						<h3>Entertainment web app</h3>
+						<h4>Entertainment web app</h4>
 						<ul class="project-tools">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -186,7 +195,7 @@
 							alt="Screenshot for Memory Game"
 							class="project-img"
 						/>
-						<h3>Memory Game</h3>
+						<h4>Memory Game</h4>
 						<ul class="project-tools">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -208,7 +217,7 @@
 							alt="Screenshot for Art Gallery Showcase"
 							class="project-img"
 						/>
-						<h3>Art gallery showcase</h3>
+						<h4>Art gallery showcase</h4>
 						<ul class="project-tools">
 							<li>HTML</li>
 							<li>CSS</li>
@@ -222,41 +231,36 @@
 				</ul>
 			</section>
 			<section class="form-section">
-				<h2>Contact</h2>
-				<p class="margin-inline-auto">
-					I would love to hear about your project and how I could help. Please
-					fill in the form, and I’ll get back to you as soon as possible.
-				</p>
-				<form></form>
-				<button class="btn" type="submit"></button>
+				<div>
+          <h2>Contact</h2>
+          <p class="margin-inline-auto">
+            I would love to hear about your project and how I could help. Please
+            fill in the form, and I’ll get back to you as soon as possible.
+          </p>
+          <form></form>
+          <button class="btn" type="submit">Send Message</button>
+        </div>
 			</section>
 		</main>
-		<footer>
-			<div class="wrapper">
-				<p class="logo">adamkeyes</p>
-				<ul class="social-icons">
-					<li>
-						<a href="#">
-							<img src="./assets/images/icon-github.svg" alt="" />
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="./assets/images/icon-frontend-mentor.svg" alt="" />
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="./assets/images/icon-linkedin.svg" alt="" />
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="./assets/images/icon-twitter.svg" alt="" />
-						</a>
-					</li>
-				</ul>
-			</div>
+		<hr />
+		<footer class="wrapper fixed-items">
+			<p class="logo">adamkeyes</p>
+			<ul class="social-icons">
+				<li>
+					<a href="#"><img src="./assets/images/icon-github.svg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"
+						><img src="./assets/images/icon-frontend-mentor.svg" alt=""
+					/></a>
+				</li>
+				<li>
+					<a href="#"><img src="./assets/images/icon-linkedin.svg" alt="" /></a>
+				</li>
+				<li>
+					<a href="#"><img src="./assets/images/icon-twitter.svg" alt="" /></a>
+				</li>
+			</ul>
 		</footer>
 	</body>
 </html>
