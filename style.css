@@ -318,7 +318,7 @@ hr {
 	display: grid;
 	grid-template-columns: auto minmax(250px, 445px) auto;
 	grid-template-areas: '. form .';
-  padding-top: 3.75rem;
+	padding-top: 3.75rem;
 	/* outline: 1px solid lightcyan; */
 }
 
@@ -390,8 +390,32 @@ form textarea {
 	}
 }
 
-/* Add form-validation html/css/js */
-/* Not ok comes with red underline, red text and a warning sign */
+/* Form Validation */
+
+.form-group {
+	width: 100%;
+	position: relative;
+}
+
+.error-message {
+	color: red;
+  text-align: right;
+	font-weight: 500;
+	font-size: 0.75rem;
+}
+
+.error-icon {
+	position: absolute;
+	width: 1.5rem;
+	top: 0.5rem;
+	right: 0;
+	transform: translateY(25%);
+}
+
+.icon-tabler {
+  stroke: red;
+
+}
 
 .form-section,
 footer {
@@ -404,7 +428,7 @@ footer {
 }
 
 footer hr {
-  margin-bottom: 2.5rem;
+	margin-bottom: 2.5rem;
 }
 
 /* Buttons */
