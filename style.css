@@ -328,7 +328,7 @@ hr {
 	/* outline: 1px solid lightcoral; */
 }
 
-form {
+.formgroup {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -340,8 +340,8 @@ form {
 	color: var(--clr-neutral-200);
 }
 
-form input,
-form textarea {
+.formgroup input,
+.formgroup textarea {
 	text-transform: uppercase;
 	color: var(--clr-neutral-200);
 	font-size: 1rem;
@@ -353,7 +353,7 @@ form textarea {
 	width: 100%;
 }
 
-form textarea {
+.formgroup textarea {
 	resize: none;
 	height: 110px;
 }
@@ -392,16 +392,9 @@ form textarea {
 
 /* Form Validation */
 
-.form-group {
+.formgroup div {
 	width: 100%;
 	position: relative;
-}
-
-.error-message {
-	color: red;
-  text-align: right;
-	font-weight: 500;
-	font-size: 0.75rem;
 }
 
 .error-icon {
@@ -412,10 +405,25 @@ form textarea {
 	transform: translateY(25%);
 }
 
-.icon-tabler {
-  stroke: red;
-
+.hidden {
+	visibility: hidden;
 }
+
+.icon-tabler {
+	stroke: red;
+}
+
+.error-message {
+	height: 1rem;
+	color: red;
+	text-align: right;
+	font-weight: 500;
+	font-size: 0.75rem;
+	/* outline: 1px solid lightgreen; */
+	margin-top: -1.5rem;
+}
+
+/*  */
 
 .form-section,
 footer {

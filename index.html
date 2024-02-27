@@ -265,54 +265,103 @@
 						fill in the form, and I’ll get back to you as soon as possible.
 					</p>
 				</div>
-				<form>
-					<label class="sr-only" for="fullname">Name</label>
-					<input
-						type="text"
-						name="fullname"
-						id="fullname"
-						required
-						placeholder="name"
-						oninput="validateInput()"
-					/>
-					<div class="form-group">
-						<label class="sr-only" for="email">Email</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							required
-							placeholder="email"
-							oninput="validateInput()"
-						/>
-						<p class="error-icon">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="icon icon-tabler icon-tabler-exclamation-circle"
-								width="28"
-								height="28"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="#000000"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-								<path d="M12 9v4" />
-								<path d="M12 16v.01" />
-							</svg>
-						</p>
-						<p class="error-message">Sorry, invalid format here</p>
+				<form id="registrationForm">
+					<div class="formgroup">
+						<label class="sr-only" for="fullName">Name</label>
+						<div>
+							<input
+								required
+								minlength="2"
+								type="text"
+								id="fullName"
+								placeholder="name"
+							/>
+							<span class="error-icon hidden">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-exclamation-circle"
+									width="28"
+									height="28"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="#000000"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+									<path d="M12 9v4" />
+									<path d="M12 16v.01" />
+								</svg>
+							</span>
+						</div>
+						<div class="error-message"></div>
 					</div>
-					<label class="sr-only" for="message">Message</label>
-					<textarea
-						name="message"
-						id="message"
-						required
-						placeholder="message"
-					></textarea>
+					<div class="formgroup">
+						<label class="sr-only" for="email">Email</label>
+						<div>
+							<input
+								required
+								pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+								type="email"
+								id="email"
+								placeholder="email"
+							/>
+							<span class="error-icon hidden">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-exclamation-circle"
+									width="28"
+									height="28"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="#000000"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+									<path d="M12 9v4" />
+									<path d="M12 16v.01" />
+								</svg>
+							</span>
+						</div>
+						<div class="error-message"></div>
+					</div>
+					<div class="formgroup">
+						<label class="sr-only" for="message">Message</label>
+						<div>
+							<textarea
+								minlength="10"
+								name="message"
+								id="message"
+								placeholder="message"
+							></textarea>
+							<span class="error-icon hidden">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon icon-tabler icon-tabler-exclamation-circle"
+									width="28"
+									height="28"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="#000000"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+									<path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+									<path d="M12 9v4" />
+									<path d="M12 16v.01" />
+								</svg>
+							</span>
+						</div>
+						<div class="error-message"></div>
+					</div>
+
 					<button class="btn form-btn" type="submit">Send Message</button>
 				</form>
 			</div>
