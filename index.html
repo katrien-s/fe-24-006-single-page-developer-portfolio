@@ -15,8 +15,8 @@
 		<title>Frontend Mentor | Single-page developer portfolio</title>
 	</head>
 	<body>
-		<header>
-			<div class="wrapper fixed-items">
+		<header class="wrapper">
+			<div class="fixed-items">
 				<p class="logo">adamkeyes</p>
 				<ul class="social-icons">
 					<li>
@@ -63,7 +63,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="hero-section">
+			<section class="hero-section">
 				<img
 					srcset="
 						./assets/images/image-profile-mobile.webp  345w,
@@ -72,24 +72,25 @@
 					"
 					sizes="(max-width: 40em) 345px, (max-width: 40em) 409px, 949px"
 					src="./assets/images/image-profile-desktop.webp"
-					alt="Screenshot for Design Portfolio"
+					alt="Adam Keyes"
 					class="hero-img"
 				/>
-			</div>
+				<div class="hero-text">
+					<h1>
+						Nice to meet you! I'm
+						<span class="text-underline">Adam Keyes</span>.
+					</h1>
+					<p class="margin-inline-auto">
+						Based in the UK, I'm a front-end developer passionate about building
+						accessible web apps that users love.
+					</p>
+					<button class="btn">Contact me</button>
+				</div>
+			</section>
 		</header>
 		<hr />
-		<main class="wrapper">
-			<section class="intro-section">
-				<h1>
-					Nice to meet you! I'm <span class="text-underline">Adam Keyes</span>.
-				</h1>
-				<p class="margin-inline-auto">
-					Based in the UK, I'm a front-end developer passionate about building
-					accessible web apps that users love.
-				</p>
-				<button class="btn">Contact me</button>
-			</section>
-			<section class="expertise-section">
+		<main>
+			<section class="wrapper expertise-section">
 				<ul class="expertise-list">
 					<li class="expertise-list__item">
 						<h3>HTML</h3>
@@ -117,7 +118,7 @@
 					</li>
 				</ul>
 			</section>
-			<section class="projects-section">
+			<section class="wrapper projects-section">
 				<div class="projects-header">
 					<h2>Projects</h2>
 					<button class="btn">Contact me</button>
