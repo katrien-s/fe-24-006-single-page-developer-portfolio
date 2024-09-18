@@ -15,8 +15,8 @@
 		<title>Frontend Mentor | Single-page developer portfolio</title>
 	</head>
 	<body>
-		<header class="header">
-			<nav class="wrapper header__nav">
+		<header class="header | container">
+			<nav class="header__nav">
 				<a href="/" class="header__home">adamkeyes</a>
 				<a href="" class="header__social" tabindex="0">
 					<svg
@@ -83,32 +83,32 @@
 			</nav>
 		</header>
 
-		<main id="main">
+		<main id="main" class="flow" style="--flow-space: 5rem">
 			<section class="hero">
-				<div class="wrapper hero__wrapper">
-					<picture class="hero__image">
-						<source
-							media="(min-width: 62.5em)"
-							srcset="./assets/images/image-profile-desktop.webp"
-						/>
-						<source
-							media="(min-width: 37.5em)"
-							srcset="./assets/images/image-profile-tablet.webp"
-						/>
-						<img
-							src="assets/images/image-profile-mobile.webp"
-							alt="Adam Keyes" width="174" height="383"
-						/>
-					</picture>
-					<div class="hero__text">
-						<h1 class="hero__headline">
-							Nice to meet you! I'm <span>Adam Keyes</span>.
+				<div class="hero__wrapper | fb-col-wrapper">
+					<img
+						src="./assets/images/image-profile-mobile.webp"
+						srcset="
+							./assets/images/image-profile-mobile.webp  348w,
+							./assets/images/image-profile-tablet.webp  646w,
+							./assets/images/image-profile-desktop.webp 890w
+						"
+						sizes="
+              (max-width: 43.75rem) 50vw, 
+              (min-width: 43.75rem) and (max-width: 62.5rem) 50vw, 
+              (min-width: 62.5rem) 30vw"
+						alt="Adam Keyes"
+						class="img hero__image"
+					/>
+					<div class="hero__text | flex flex-column" style="--gap: 24px">
+						<h1 class="hero__headline | fs-900 fw-700 letter-spacing-1">
+							Nice to meet you! I'm <span class="underline">Adam Keyes</span>.
 						</h1>
-						<p class="hero__description">
+						<p class="hero__description | fs-300">
 							Based in the UK, I'm a front-end developer passionate about
 							building accessible web apps that users love.
 						</p>
-						<a href="" class="hero__contact underline">Contact Me</a>
+						<button class="btn">contact me</button>
 					</div>
 				</div>
 			</section>
@@ -117,7 +117,7 @@
 		<!-- <footer class="footer"></footer> -->
 
 		<!-- <main>
-			<section class="wrapper expertise-section">
+			<section class="container expertise-section">
 				<ul class="expertise-list">
 					<li class="expertise-list__item">
 						<h3>HTML</h3>
@@ -145,7 +145,7 @@
 					</li>
 				</ul>
 			</section>
-			<section class="wrapper projects-section">
+			<section class="container projects-section">
 				<div class="projects-header">
 					<h2>Projects</h2>
 					<button class="btn">Contact me</button>
@@ -285,7 +285,7 @@
 			</section>
 		</main>
 		<section class="form-section">
-			<div class="form-control wrapper">
+			<div class="form-control container">
 				<div class="form-text">
 					<h2>Contact</h2>
 					<p class="margin-inline-auto margin-bottom-64">
@@ -396,7 +396,7 @@
 		</section>
 		<footer>
 			<hr />
-			<div class="wrapper fixed-items">
+			<div class="container fixed-items">
 				<p class="logo">adamkeyes</p>
 				<ul class="social-icons">
 					<li>
