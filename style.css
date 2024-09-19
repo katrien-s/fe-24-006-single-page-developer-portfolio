@@ -17,8 +17,6 @@
 	--clr-accent-400: 153, 71%, 59%;
 	--clr-error-400: 7, 100%, 68%;
 
-	--transition: all 0.3s ease-in-out;
-
 	--fs-900: 2.5rem;
 	--fs-800: 2rem;
 	--fs-700: 2rem;
@@ -191,15 +189,16 @@ body {
 }
 
 .container {
-	--spacing-inline: 2rem;
+	--spacing-gap: 2.5rem;
+	--spacing-inline: calc(2rem + var(--spacing-gap));
 
-	width: min(var(--content-max-width), calc(100% - var(--spacing-inline)));
+	width: min(calc(100vw - var(--spacing-inline)), var(--content-max-width));
 	margin-inline: auto;
 }
 
 .fb-col-wrapper {
-	--spacing-inline: 2rem;
-	--spacing-gap: 40px;
+	--spacing-inline: calc(2rem + var(--spacing-gap));
+	--spacing-gap: 2.5rem;
 	--col-count: 0;
 
 	display: grid;
@@ -329,7 +328,13 @@ body {
 	letter-spacing: -2.5px;
 }
 .letter-spacing-2 {
-	letter-spacing: -1.5px;
+	letter-spacing: -1px;
+}
+
+@media (width >= 43.75em) {
+	.letter-spacing-2 {
+		letter-spacing: -1.5px;
+	}
 }
 
 .uppercase {
@@ -462,7 +467,8 @@ a:hover {
 	margin-block-start: 20px;
 }
 
-.header__nav {
+.header__nav,
+.footer__nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -472,7 +478,8 @@ a:hover {
 	z-index: 1;
 }
 
-.header__home {
+.header__home,
+.footer__home {
 	color: var(--clr-neutral-100);
 	font-size: var(--fs-600);
 	line-height: 1;
@@ -484,7 +491,7 @@ svg > path {
 }
 
 svg:hover > path {
-	fill: var(--clr-accent-400);
+	fill: hsl(var(--clr-accent-400));
 }
 
 @media (width >= 43.75em) {
@@ -492,7 +499,8 @@ svg:hover > path {
 		margin-block-start: 30px;
 	}
 
-	.header__nav {
+	.header__nav,
+	.footer__nav {
 		grid-column: 2/13;
 		flex-wrap: nowrap;
 		justify-content: space-between;
@@ -500,12 +508,14 @@ svg:hover > path {
 		gap: 32px;
 	}
 
-	.header__home {
+	.header__home,
+	.footer__home {
 		flex: 0 1 auto;
 		margin-inline-end: auto;
 	}
 
-	.header__social {
+	.header__social,
+	.footer-social {
 		align-self: end;
 	}
 }
@@ -565,36 +575,35 @@ svg:hover > path {
 	}
 }
 
+/* Expertise */
+
 .expertise-section {
-	padding-block: 2.5rem;
+	border-block: 1px solid hsl(var(--clr-neutral-100));
+	padding-block: 39px;
+	text-align: center;
 }
 
 .expertise-list {
 	display: grid;
-	gap: 2rem;
-}
-
-.expertise-list__item p {
-	color: var(--clr-neutral-200);
+	gap: 1.5rem;
 }
 
 @media (width >= 43.75em) {
+	.expertise-section {
+		border-bottom: unset;
+	}
+
 	.expertise-list {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		row-gap: 3.25rem;
 	}
 
 	.expertise-list__item {
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		gap: 1rem;
+		text-align: left;
 	}
 }
 
-.projects-section {
-	padding-block: 5rem;
-}
+/* Projects */
 
 .projects-header {
 	display: flex;
@@ -602,18 +611,10 @@ svg:hover > path {
 	justify-content: space-between;
 }
 
-.project-cards {
+.project-card__list {
 	padding-block: 2.5rem;
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	gap: 2.5rem;
-}
-
-.project-card {
-	text-align: left;
-	margin-inline: auto;
-	display: flex;
-	flex-direction: column;
 }
 
 .project-img {
@@ -621,48 +622,36 @@ svg:hover > path {
 }
 
 .project-tools {
-	color: var(--clr-neutral-200);
-	font-size: 1rem;
-	text-transform: uppercase;
+	font-size: var(--fs-400);
+	color: hsl(var(--clr-neutral-200));
 	display: flex;
-	gap: 2rem;
-	margin-block: 1.25rem 2.25rem;
+	gap: 18px;
+	text-transform: uppercase;
+	margin-block: 7px 20px;
 }
 
 .project-buttons {
 	display: flex;
-	gap: 2rem;
+	justify-content: start;
+	gap: 30px;
+}
+
+.project-buttons .btn {
+	margin-inline: unset;
 }
 
 @media (width >= 40em) {
-	.projects-section {
-		padding-top: 3.75rem;
-	}
-
-	.project-cards {
-		display: grid;
+	.project-card__list {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 5rem 1.5rem;
 		padding-bottom: 0;
 	}
-
-	.project-buttons {
-		margin-top: auto;
-	}
-}
-
-.form-section {
-	display: grid;
-	grid-template-columns: auto minmax(250px, 445px) auto;
-	grid-template-areas: '. form .';
-	padding-top: 3.75rem;
-	/* outline: 1px solid lightcyan; */
 }
 
 .form-section .form-control {
-	grid-area: form;
-	margin-bottom: 3rem;
-	/* outline: 1px solid lightcoral; */
+	border-block: 1px solid hsl(var(--clr-neutral-100));
+	padding-block: 3.75rem;
+	grid-area: form; /* outline: 1px solid lightcoral; */
 }
 
 .formgroup {
@@ -749,18 +738,7 @@ svg:hover > path {
 	margin-top: 0.5rem;
 }
 
-/*  */
-
-.form-section,
-footer {
-	background-color: var(--clr-neutral-800);
-}
-
 /* Footer */
 footer {
 	padding-block: 1.875rem 3rem;
-}
-
-footer hr {
-	margin-bottom: 2.5rem;
 }
