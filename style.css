@@ -549,7 +549,7 @@ svg:hover > path {
 	}
 
 	.hero__description {
-    max-width: 40ch;
+		max-width: 40ch;
 		margin-block: 60px 30px;
 	}
 }
@@ -634,11 +634,41 @@ svg:hover > path {
 	margin-inline: unset;
 }
 
-@media (width >= 40em) {
+@media (width >= 43.75em) {
 	.project-card__list {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 5rem 1.5rem;
 		padding-bottom: 0;
+	}
+}
+
+@media (width >= 62.5em) {
+	.project-card__item {
+		position: relative;
+	}
+
+	.project-buttons {
+    display: none;
+	}
+
+	.project-card__item:hover .project-buttons,
+	.project-card__item:active .project-buttons,
+	.project-card__item:focus .project-buttons {
+		cursor: pointer;
+		position: absolute;
+		background-color: hsla(var(--clr-neutral-900), 0.7);
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		height: calc(100% - 90px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.project-tools {
+		margin-bottom: 0;
 	}
 }
 
