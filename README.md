@@ -52,7 +52,7 @@ Users should be able to:
 - [The BEST way to do form validation in JavaScript](https://www.youtube.com/watch?v=iyngFd6f8ko) - YouTube-tutorial from (Code with Bubb)(https://www.youtube.com/@codewithbubb) on how to do form validation.
 - [Accessibility Developer Guide](https://www.accessibility-developer-guide.com) - Hiding Elements
 - [Accessible SVGs](https://a11y-101.com/development/svg) - Implement a11y on SVG's
-- [Position the border-bottom of text](https://martinwolf.org/before-2018/blog/2012/09/positioning-the-border-bottom-of-inline-elements/). Though we didn't use this solution as the line would not break when the words do.
+- [Position the border-bottom of text](https://martinwolf.org/before-2018/blog/2012/09/positioning-the-border-bottom-of-inline-elements/). Though I didn't use this solution as the line would not break when the words do.
 
 ## Author
 
